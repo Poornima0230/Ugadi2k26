@@ -5,8 +5,9 @@ function App() {
   const [text, setText] = useState("");
   const [name, setName] = useState("");
   const [start, setStarted] = useState(false);
+  const [completed, setCompleted] = useState(false);
 
-  const message = `> Initializing Ugadi Protocol...\n> Loading Happiness... |||||||100%\n> Installing success... ||||| 100%\n> Removing negativity... |||||||100%\n\n> Dear ${
+  const message = `> Initializing Ugadi Protocol...\n> Loading Happiness... 100%\n> Installing success...100%\n> Removing negativity... 100%\n\n> Dear ${
     name || "Friend"
   },\n> This is your fresh start.\n> New dreams unlocked.\n> New opportunities detected.\n\n> Status: You are going to shine this year ✨\n\n> Happy Ugadi 🌸`;
 
@@ -18,7 +19,10 @@ function App() {
       setText(message.slice(0, i));
       i++;
 
-      if (i > message.length) clearInterval(interval);
+      if (i > message.length) {
+        clearInterval(interval);
+        setTimeout(() => setCompleted(true), 500);
+      }
     }, 30);
 
     return () => clearInterval(interval);
@@ -41,9 +45,20 @@ function App() {
             Run Wish
           </button>
         </div>
-      ) : (
+      ) : !completed ? (
         <div className="inside-container">
           <pre>{text}</pre>
+        </div>
+      ) : (
+        <div className="split-container">
+          <div className="split-overlay animate-split">
+            <div className="top-half"></div>
+            <div className="bottom-half"></div>
+            <div className="final-text animate-fadeIn">
+              <h1>Happy Ugadi</h1>
+              <h2>{name || "Friend"}</h2>
+            </div>
+          </div>
         </div>
       )}
     </div>
