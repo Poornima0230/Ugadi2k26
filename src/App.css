@@ -1,0 +1,116 @@
+body {
+  background: #0d1117;
+}
+
+.container {
+  background-color: #000;
+  color: rgba(115, 255, 90);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  /* padding: 3rem; */
+  height: 96.99dvh;
+
+  /* border: 2px solid pink; */
+}
+
+.terminal {
+  background-color: #0d1117;
+  padding: 2rem;
+  border: 0.02px solid rgba(115, 255, 90);
+  text-align: center;
+  /* width: 100%; */
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+
+  & h1 {
+    font-size: 3rem;
+  }
+}
+
+.input-box {
+  border: 1px solid rgba(115, 255, 90);
+  background-color: #000;
+  padding: 1rem;
+  color: rgba(115, 255, 90);
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  outline: none;
+  border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+}
+
+.button {
+  border: 1px solid rgba(115, 255, 90);
+  background-color: rgba(115, 255, 90);
+  font-size: 1.2rem;
+  padding: 1rem;
+  width: 10rem;
+  transition: all 0.3s ease-in-out;
+  border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+
+  &:hover {
+    background: transparent;
+    color: rgba(115, 255, 90);
+  }
+}
+
+.inside-container {
+  background-color: #0d1117;
+  /* color: #5b00db; */
+  padding: 2rem;
+
+  font-size: 1.2rem;
+  text-align: left;
+  color: rgba(115, 255, 90);
+  border: 1.5px solid rgba(115, 255, 90);
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+
+pre {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+@media(max-width:990px) {
+  /* html {
+    font-size: 70%;
+  } */
+
+  .inside-container {
+    /* font-size: 1.7rem; */
+    /* width: 100%; */
+    /* text-wrap: wrap; */
+    padding: 1rem;
+  }
+
+  /* .terminal {
+    padding: 0;
+  } */
+}
