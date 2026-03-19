@@ -23,7 +23,7 @@ function App() {
         clearInterval(interval);
         setTimeout(() => setCompleted(true), 500);
       }
-    }, 30);
+    }, 65);
 
     return () => clearInterval(interval);
   }, [start, message]);
